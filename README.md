@@ -7,11 +7,8 @@ The PowerPoint slides for this project can be found at [SpaceX_Falcon9_Data_Scie
 In this capstone project, we will predict if the SpaceX Falcon 9 first stage will land successfully using several machine learning classification algorithms. The main steps in this project include:
 
 # Data collection, wrangling, and formatting
-
 Exploratory data analysis
-
 Interactive data visualization
-
 Machine learning prediction
 
 Our graphs show that some features of the rocket launches have a correlation with the outcome of the launches, i.e., success or failure. It is also concluded that decision tree may be the best machine learning algorithm to predict if the Falcon 9 first stage will land successfully.
@@ -23,73 +20,45 @@ In this capstone, we will predict if the Falcon 9 first stage will land successf
 Most unsuccessful landings are planned. Sometimes, SpaceX will perform a controlled landing in the ocean. The main question that we are trying to answer is, for a given set of features about a Falcon 9 rocket launch which include its payload mass, orbit type, launch site, and so on, will the first stage of the rocket land successfully?
 
 # Methodology
-
 The overall methodology includes:
 
 **1.Data collection, wrangling, and formatting, using:**
-
 SpaceX API
-
 Web scraping
 
 **2.Exploratory data analysis (EDA), using:**
-
 Pandas and NumPy
-
 SQL
 
 **3.Data visualization, using:**
-
 Matplotlib and Seaborn
-
 Folium
-
 Dash
 
 **4.Machine learning prediction, using:**
-
 Logistic regression
-
 Support vector machine (SVM)
-
 Decision tree
-
 K-nearest neighbors (KNN)
 
 # Data collection using SpaceX API
-
-1_Data Collection API.ipynb
-
 Libraries or modules used: requests, pandas, numpy, datetime
-
 The API used is here.
-
 The API provides data about many types of rocket launches done by SpaceX, the data is therefore filtered to include only Falcon 9 launches.
-
 The API is accessed using requests.get().
-
 The json result is converted to a dataframe using the json_normalize() function from pandas.
-
 Every missing value in the data is replaced the mean the column that the missing value belongs to.
-
 We end up with 90 rows or instances and 17 columns or features.
 
 # Data Collection with Web Scraping
-
-2_Data Collection with Web Scraping.ipynb
-
 Libraries or modules used: sys, requests, BeautifulSoup from bs4, re, unicodedata, pandas
-
 The data is scraped from List of Falcon 9 and Falcon Heavy launches.
-
 The website contains only the data about Falcon 9 launches.
 
 First, the Falcon9 Launch Wiki page is requested from the url and a BeautifulSoup object is created from response of requests.get().
-
 Next, all column/variable names are extracted from the HTML table header by using the find_all() function from BeautifulSoup.
 
 A dataframe is then created with the extracted column names and entries filled with launch records extracted from table rows.
-
 We end up with 121 rows or instances and 11 columns or features.
 
 # EDA with Pandas and Numpy
