@@ -6,19 +6,10 @@ The PowerPoint slides for this project can be found at [SpaceX_Falcon9_Data_Scie
 
 In this capstone project, we will predict if the SpaceX Falcon 9 first stage will land successfully using several machine learning classification algorithms. The main steps in this project include:
 
-1_Data collection, wrangling, and formatting
-2_Exploratory data analysis
-3_Interactive data visualization
-4_Machine learning prediction
-
-Our graphs show that some features of the rocket launches have a correlation with the outcome of the launches, i.e., success or failure. It is also concluded that decision tree may be the best machine learning algorithm to predict if the Falcon 9 first stage will land successfully.
-
-# Data collection, wrangling, and formatting
-Exploratory data analysis
-
-Interactive data visualization
-
-Machine learning prediction
+1. Data collection, wrangling, and formatting
+2. Exploratory data analysis
+3. Interactive data visualization
+4. Machine learning prediction
 
 Our graphs show that some features of the rocket launches have a correlation with the outcome of the launches, i.e., success or failure. It is also concluded that decision tree may be the best machine learning algorithm to predict if the Falcon 9 first stage will land successfully.
 
@@ -32,32 +23,25 @@ Most unsuccessful landings are planned. Sometimes, SpaceX will perform a control
 The overall methodology includes:
 
 **1.Data collection, wrangling, and formatting, using:**
--SpaceX API
+- SpaceX API
 - Web scraping
 
 **2.Exploratory data analysis (EDA), using:**
-Pandas and NumPy
-
-SQL
+- Pandas and NumPy
+- SQL
 
 **3.Data visualization, using:**
-Matplotlib and Seaborn
-
-Folium
-
-Dash
+- Matplotlib and Seaborn
+- Folium
+- Dash
 
 **4.Machine learning prediction, using:**
-Logistic regression
-
-Support vector machine (SVM)
-
-Decision tree
-
-K-nearest neighbors (KNN)
+- Logistic regression
+- Support vector machine (SVM)
+- Decision tree
+- K-nearest neighbors (KNN)
 
 # Data collection using SpaceX API
-[Uploading 1.jupyter_labs_spacex_data_collection_api.ipynb…]()
 
 Libraries or modules used: requests, pandas, numpy, datetime
 
