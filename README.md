@@ -6,10 +6,21 @@ The PowerPoint slides for this project can be found at [SpaceX_Falcon9_Data_Scie
 
 In this capstone project, we will predict if the SpaceX Falcon 9 first stage will land successfully using several machine learning classification algorithms. The main steps in this project include:
 
-# Data collection, wrangling, and formatting
+Data collection, wrangling, and formatting
 
 Exploratory data analysis
+
 Interactive data visualization
+
+Machine learning prediction
+
+Our graphs show that some features of the rocket launches have a correlation with the outcome of the launches, i.e., success or failure. It is also concluded that decision tree may be the best machine learning algorithm to predict if the Falcon 9 first stage will land successfully.
+
+# Data collection, wrangling, and formatting
+Exploratory data analysis
+
+Interactive data visualization
+
 Machine learning prediction
 
 Our graphs show that some features of the rocket launches have a correlation with the outcome of the launches, i.e., success or failure. It is also concluded that decision tree may be the best machine learning algorithm to predict if the Falcon 9 first stage will land successfully.
@@ -25,26 +36,37 @@ The overall methodology includes:
 
 **1.Data collection, wrangling, and formatting, using:**
 SpaceX API
+
 Web scraping
 
 **2.Exploratory data analysis (EDA), using:**
 Pandas and NumPy
+
 SQL
 
 **3.Data visualization, using:**
 Matplotlib and Seaborn
+
 Folium
+
 Dash
 
 **4.Machine learning prediction, using:**
 Logistic regression
+
 Support vector machine (SVM)
+
 Decision tree
+
 K-nearest neighbors (KNN)
 
 # Data collection using SpaceX API
+[Uploading 1.jupyter_labs_spacex_data_collection_api.ipynb…]()
+
 Libraries or modules used: requests, pandas, numpy, datetime
+
 The API used is here.
+
 The API provides data about many types of rocket launches done by SpaceX, the data is therefore filtered to include only Falcon 9 launches.
 The API is accessed using requests.get().
 The json result is converted to a dataframe using the json_normalize() function from pandas.
