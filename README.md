@@ -73,17 +73,12 @@ Functions from the Pandas and NumPy libraries such as value_counts() are used to
 
 # EDA with SQL
 
-Framework used: IBM DB2
-
-Libraries or modules used: ibm_db
-
-The data is queried using SQL to answer several questions about the data such as:
-
-The names of the unique launch sites in the space mission
-
-The total payload mass carried by boosters launched by NASA (CRS)
-
-The average payload mass carried by booster version F9 v1.1
+- Framework used: IBM DB2
+- Libraries or modules used: ibm_db
+- The data is queried using SQL to answer several questions about the data such as:
+- The names of the unique launch sites in the space mission
+- The total payload mass carried by boosters launched by NASA (CRS)
+- The average payload mass carried by booster version F9 v1.1
 
 The SQL statements or functions used include SELECT, DISTINCT, AS, FROM, WHERE, LIMIT, LIKE, SUM(), AVG(), MIN(), BETWEEN, COUNT(), and YEAR().
 
@@ -93,37 +88,27 @@ Libraries or modules used: pandas, numpy, matplotlib.pyplot, seaborn
 
 Functions from the Matplotlib and Seaborn libraries are used to visualize the data through scatterplots, bar charts, and line charts. The plots and charts are used to understand more about the relationships between several features, such as:
 
-The relationship between flight number and launch site
-
-The relationship between payload mass and launch site
-
-The relationship between success rate and orbit type
+- The relationship between flight number and launch site
+- The relationship between payload mass and launch site
+- The relationship between success rate and orbit type
 
 Examples of functions from seaborn that are used here are scatterplot(), barplot(), catplot(), and lineplot().
 
-
 Example: A scatterplot showing the relationship between flight number and launch site
 <img width="1061" height="503" alt="Flight_number VS LAunch_site" src="https://github.com/user-attachments/assets/257f8c82-a43d-4329-b160-8635d4ae0d5b" />
-
-
 
 # Data Visualization using Folium
 
 Libraries or modules used: folium, wget, pandas, math
 
 Functions from the Folium libraries are used to visualize the data through interactive maps. The Folium library is used to:
+- Mark all launch sites on a map
+- Mark the succeeded launches and failed launches for each site on the map
+- Mark the distances between a launch site to its proximities such as the nearest city, railway, or highway
 
-Mark all launch sites on a map
-
-Mark the succeeded launches and failed launches for each site on the map
-
-Mark the distances between a launch site to its proximities such as the nearest city, railway, or highway
-
-These are done using functions from folium such as add_child() and folium plugins which include MarkerCluster, MousePosition, and DivIcon.
-
+These are done using functions from folium such as add_child() and folium plugins which include MarkerCluster, MousePosition, and DivIcon
 
 Example: A folium map showing the succeeded launches and failed launches for a specific launch site. If we zoom in on one of the launch site, we can see green and red tags. Each green tag represents a successful launch while each red tag represents a failed launch.
-Picture 2
 <img width="1061" height="503" alt="Flight_number VS LAunch_site" src="https://github.com/user-attachments/assets/cd15ce42-fcd1-4073-8f7a-29956310e249" />
 
 
@@ -133,9 +118,9 @@ Libraries or modules used: pandas, dash, dash_html_components, dash_core_compone
 
 Functions from Dash are used to generate an interactive site where we can toggle the input using a dropdown menu and a range slider. Using a pie chart and a scatterplot, the interactive site shows:
 
-The total success launches from each launch site.
-The correlation between payload mass and mission outcome (success or failure) for each launch site.
-The application is launched on a terminal on the IBM Skills Network website.
+- The total success launches from each launch site.
+- The correlation between payload mass and mission outcome (success or failure) for each launch site.
+- The application is launched on a terminal on the IBM Skills Network website.
 
 The picture below shows a scatterplot when the payload mass range is set to be from 2000kg to 8000kg. Class 0 represents failed launches while class 1 represents successful launches.
 <img width="748" height="271" alt="dash" src="https://github.com/user-attachments/assets/91d19340-ed5a-4a7a-89b0-f5c0be0246b4" />
@@ -182,4 +167,4 @@ In this project, we try to predict if the first stage of a given Falcon 9 launch
 
 Several machine learning algorithms are employed to learn the patterns of past Falcon 9 launch data to produce predictive models that can be used to predict the outcome of a Falcon 9 launch. The predictive model produced by decision tree algorithm performed the best among the 4 machine learning algorithms employed.
 
-~ Project created in October 2023 ~
+~ Project created in November 2026 ~
