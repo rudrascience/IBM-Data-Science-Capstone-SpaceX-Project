@@ -1,70 +1,234 @@
-## Applied Data Science Capstone Project
-# Overview
-Welcome to the Applied Data Science Capstone Project, where we embark on a journey to predict the successful landing of the Falcon 9 first stage. SpaceX, known for revolutionizing space travel, advertises Falcon 9 rocket launches at a competitive cost of 62 million dollars, compared to other providers' costs upwards of 165 million dollars. This significant cost-saving is largely attributed to SpaceX's ability to reuse the first stage of the rocket. By accurately predicting the landing success of the first stage, we can better estimate the launch costs, providing valuable insights for companies bidding against SpaceX for rocket launches.
+## IBM Data Science Capstone SpaceX Project
 
-# Objectives
-The project is structured into several comprehensive modules, each designed to build on the previous one, culminating in a robust predictive model. Below is a detailed description of the tasks and goals achieved in each module:
+The PowerPoint slides for this project can be found at [SpaceX_Falcon9_Data_Science_Presentation.pdf](https://github.com/user-attachments/files/34423909/SpaceX_Falcon9_Data_Science_Presentation.pdf)
 
-# 1. Request to the SpaceX API and Data Wrangling
+# Executive summary
 
-**Data Collection:** We initiated our project by making a GET request to the SpaceX API to gather historical launch data. This data included various parameters essential for our analysis.
+In this capstone project, we will predict if the SpaceX Falcon 9 first stage will land successfully using several machine learning classification algorithms. The main steps in this project include:
 
-**Data Cleaning:** After obtaining the data, we performed cleaning and formatting to ensure consistency, removing any anomalies or missing values, and preparing it for analysis.
+# Data collection, wrangling, and formatting
 
-# 2. Web Scraping Falcon 9 Launch Records
+Exploratory data analysis
 
-**Web Scraping with BeautifulSoup:** We extracted Falcon 9 launch records from Wikipedia using BeautifulSoup, a powerful Python library for web scraping.
+Interactive data visualization
 
-**Data Parsing:** The extracted HTML table was parsed and converted into a Pandas DataFrame, facilitating easy manipulation and analysis of the data.
+Machine learning prediction
 
-# 3. Exploratory Data Analysis (EDA) and Training Labels
+Our graphs show that some features of the rocket launches have a correlation with the outcome of the launches, i.e., success or failure. It is also concluded that decision tree may be the best machine learning algorithm to predict if the Falcon 9 first stage will land successfully.
 
-**Exploratory Data Analysis:** We conducted extensive EDA using visualization tools like Matplotlib and Seaborn to uncover patterns and correlations in the data.
+# Introduction
 
-**Training Labels:** Identified and labeled the training data, crucial for the subsequent machine learning models.
+In this capstone, we will predict if the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.
 
-# 4. Database Integration
+Most unsuccessful landings are planned. Sometimes, SpaceX will perform a controlled landing in the ocean. The main question that we are trying to answer is, for a given set of features about a Falcon 9 rocket launch which include its payload mass, orbit type, launch site, and so on, will the first stage of the rocket land successfully?
 
-**Loading Data into Db2:** We loaded the dataset into a Db2 database to leverage SQL for structured querying and analysis.
+# Methodology
 
-**Executing SQL Queries:** Executed various SQL queries to derive insights and answer specific questions related to the launch data.
+The overall methodology includes:
 
-# 5. Feature Engineering and Visualization
+**1.Data collection, wrangling, and formatting, using:**
 
-**Feature Engineering:** Created new features from the existing data to enhance the predictive power of our models.
+SpaceX API
 
-**Visualization with Folium:** Used Folium to create interactive maps, marking launch sites and visualizing success and failure rates, helping to identify geographical patterns.
+Web scraping
 
-# 6. Interactive Visual Analytics with Plotly Dash
+**2.Exploratory data analysis (EDA), using:**
 
-**Building the Dash Application:** Developed an interactive Plotly Dash application, allowing users to perform real-time visual analytics on the SpaceX launch data.
+Pandas and NumPy
 
-**User Interaction Components:** Incorporated dropdown lists and range sliders to enable dynamic interaction with pie charts and scatter plots, making the analysis more intuitive and engaging.
+SQL
 
-# 7. Machine Learning Models and Hyperparameter Tuning
+**3.Data visualization, using:**
 
-**Data Standardization and Splitting:** Standardized the dataset and split it into training and test sets to ensure robust model evaluation.
+Matplotlib and Seaborn
 
-**Hyperparameter Tuning:** Performed hyperparameter tuning using GridSearchCV for various models, including SVM, Classification Trees, and Logistic Regression.
+Folium
 
-**Model Evaluation:** Evaluated each model's performance on the test data to identify the best-performing model.
+Dash
 
-# Results
+**4.Machine learning prediction, using:**
 
-**Decision Tree Classifier:** Achieved the highest accuracy of 0.9444 on the test set, making it the best-performing model.
+Logistic regression
 
-**SVM and K-Nearest Neighbors:** Both models attained an accuracy of 0.8333 on the test set.
+Support vector machine (SVM)
+
+Decision tree
+
+K-nearest neighbors (KNN)
+
+# Data collection using SpaceX API
+
+1_Data Collection API.ipynb
+
+Libraries or modules used: requests, pandas, numpy, datetime
+
+The API used is here.
+
+The API provides data about many types of rocket launches done by SpaceX, the data is therefore filtered to include only Falcon 9 launches.
+
+The API is accessed using requests.get().
+
+The json result is converted to a dataframe using the json_normalize() function from pandas.
+
+Every missing value in the data is replaced the mean the column that the missing value belongs to.
+
+We end up with 90 rows or instances and 17 columns or features.
+
+# Data Collection with Web Scraping
+
+2_Data Collection with Web Scraping.ipynb
+
+Libraries or modules used: sys, requests, BeautifulSoup from bs4, re, unicodedata, pandas
+
+The data is scraped from List of Falcon 9 and Falcon Heavy launches.
+
+The website contains only the data about Falcon 9 launches.
+
+First, the Falcon9 Launch Wiki page is requested from the url and a BeautifulSoup object is created from response of requests.get().
+
+Next, all column/variable names are extracted from the HTML table header by using the find_all() function from BeautifulSoup.
+
+A dataframe is then created with the extracted column names and entries filled with launch records extracted from table rows.
+
+We end up with 121 rows or instances and 11 columns or features.
+
+# EDA with Pandas and Numpy
+
+3_EDA.ipynb
+
+Libraries or modules used: pandas, numpy
+
+Functions from the Pandas and NumPy libraries such as value_counts() are used to derive basic information about the data collected, which includes:
+
+The number of launches on each launch site
+
+The number of occurrence of each orbit
+
+The number and occurrence of each mission outcome
+
+# EDA with SQL
+
+4_EDA with SQL.ipynb
+
+Framework used: IBM DB2
+
+Libraries or modules used: ibm_db
+
+The data is queried using SQL to answer several questions about the data such as:
+
+The names of the unique launch sites in the space mission
+
+The total payload mass carried by boosters launched by NASA (CRS)
+
+The average payload mass carried by booster version F9 v1.1
+
+The SQL statements or functions used include SELECT, DISTINCT, AS, FROM, WHERE, LIMIT, LIKE, SUM(), AVG(), MIN(), BETWEEN, COUNT(), and YEAR().
+
+# Data Visualization using Matplotlib and Seaborn
+
+5_EDA Visualization.ipynb
+
+Libraries or modules used: pandas, numpy, matplotlib.pyplot, seaborn
+
+Functions from the Matplotlib and Seaborn libraries are used to visualize the data through scatterplots, bar charts, and line charts. The plots and charts are used to understand more about the relationships between several features, such as:
+
+The relationship between flight number and launch site
+
+The relationship between payload mass and launch site
+
+The relationship between success rate and orbit type
+
+Examples of functions from seaborn that are used here are scatterplot(), barplot(), catplot(), and lineplot().
+
+
+Example: A scatterplot showing the relationship between flight number and launch site
+<img width="1061" height="503" alt="Flight_number VS LAunch_site" src="https://github.com/user-attachments/assets/257f8c82-a43d-4329-b160-8635d4ae0d5b" />
+
+
+
+# Data Visualization using Folium
+
+6_Interactive Visual Analytics with Folium lab.ipynb
+
+Libraries or modules used: folium, wget, pandas, math
+
+Functions from the Folium libraries are used to visualize the data through interactive maps. The Folium library is used to:
+
+Mark all launch sites on a map
+
+Mark the succeeded launches and failed launches for each site on the map
+
+Mark the distances between a launch site to its proximities such as the nearest city, railway, or highway
+
+These are done using functions from folium such as add_child() and folium plugins which include MarkerCluster, MousePosition, and DivIcon.
+
+
+Example: A folium map showing the succeeded launches and failed launches for a specific launch site. If we zoom in on one of the launch site, we can see green and red tags. Each green tag represents a successful launch while each red tag represents a failed launch.
+Picture 2
+<img width="1061" height="503" alt="Flight_number VS LAunch_site" src="https://github.com/user-attachments/assets/cd15ce42-fcd1-4073-8f7a-29956310e249" />
+
+
+# Data Visualization using Dash
+
+7_spacex_dash_app.py
+
+Libraries or modules used: pandas, dash, dash_html_components, dash_core_components, Input and Output from dash.dependencies, plotly.express
+
+Functions from Dash are used to generate an interactive site where we can toggle the input using a dropdown menu and a range slider. Using a pie chart and a scatterplot, the interactive site shows:
+
+The total success launches from each launch site
+
+The correlation between payload mass and mission outcome (success or failure) for each launch site
+
+The application is launched on a terminal on the IBM Skills Network website.
+
+
+The picture below shows a pie chart when launch site CCAFS LC-40 is chosen in the dropdown menu on the website. 0 represents failed launches while 1 represents successful launches. We can see that 73.1% of launches done at CCAFS LC-40 are failed launches.
+
+
+
+
+The picture below shows a scatterplot when the payload mass range is set to be from 2000kg to 8000kg. Class 0 represents failed launches while class 1 represents successful launches.
+Picture 4
+
+
+# Machine Learning Prediction
+
+8_Machine Learning Prediction.ipynb
+
+Libraries or modules used: pandas, numpy, matplotlib.pyplot, seaborn, sklearn
+
+Functions from the Scikit-learn library are used to create our machine learning models. The machine learning prediction phase include the following steps:
+
+Standardizing the data using the preprocessing.StandardScaler() function from sklearn
+Splitting the data into training and test data using the train_test_split function from sklearn.model_selection
+Creating machine learning models, which include:
+Logistic regression using LogisticRegression from sklearn.linear_model
+Support vector machine (SVM) using SVC from sklearn.svm
+Decision tree using DecisionTreeClassifier from sklearn.tree
+K nearest neighbors (KNN) using KNeighborsClassifier from sklearn.neighbors
+Fit the models on the training set
+Find the best combination of hyperparameters for each model using GridSearchCV from sklearn.model_selection
+Evaluate the models based on their accuracy scores and confusion matrix using the score() function and confusion_matrix from sklearn.metrics
+Putting the results of all 4 models side by side, we can see that they all share the same accuracy score and confusion matrix when tested on the test set. Therefore, their GridSearchCV best scores are used to rank them instead. Based on the GridSearchCV best scores, the models are ranked in the following order with the first being the best and the last one being the worst:
+
+Decision tree (GridSearchCV best score: 0.8892857142857142)
+K nearest neighbors, KNN (GridSearchCV best score: 0.8482142857142858)
+Support vector machine, SVM (GridSearchCV best score: 0.8482142857142856)
+Logistic regression (GridSearchCV best score: 0.8464285714285713)
+
+The picture below shows the confusion matrix when the Decision Tree model is tested on the test data.
+Picture 5
+
+
+# Discussion
+From the data visualization section, we can see that some features may have correlation with the mission outcome in several ways. For example, with heavy payloads the successful landing or positive landing rate are more for orbit types Polar, LEO and ISS. However, for GTO, we cannot distinguish this well as both positive landing rate and negative landing(unsuccessful mission) are both there here.
+
+Therefore, each feature may have a certain impact on the final mission outcome. The exact ways of how each of these features impact the mission outcome are difficult to decipher. However, we can use some machine learning algorithms to learn the pattern of the past data and predict whether a mission will be successful or not based on the given features.
 
 # Conclusion
-Through meticulous data analysis, feature engineering, and model tuning, this project successfully predicted the landing success of the Falcon 9 first stage. The insights gained are invaluable for estimating launch costs and aiding companies in their competitive bids against SpaceX.
+In this project, we try to predict if the first stage of a given Falcon 9 launch will land in order to determine the cost of a launch. Each feature of a Falcon 9 launch, such as its payload mass or orbit type, may affect the mission outcome in a certain way.
 
-# Repository Structure
-data/: Contains the dataset and any data-related scripts.
-notebooks/: Jupyter notebooks documenting each module of the project.
-scripts/: Python scripts for data processing, visualization, and modeling.
-dash_app/: Code for the Plotly Dash interactive application.
-README.md: Comprehensive project overview and detailed description.
-Acknowledgments
-IBM: For providing the course and learning materials.
-Coursera: For the platform to access and complete the course.
-Explore this repository to dive into the complete workflow, methodologies, and innovative techniques employed in this capstone project. Whether you're a data science enthusiast, a space exploration aficionado, or a professional seeking insights into predictive modeling, this project offers something for everyone.
+Several machine learning algorithms are employed to learn the patterns of past Falcon 9 launch data to produce predictive models that can be used to predict the outcome of a Falcon 9 launch. The predictive model produced by decision tree algorithm performed the best among the 4 machine learning algorithms employed.
+
+~ Project created in October 2023 ~
