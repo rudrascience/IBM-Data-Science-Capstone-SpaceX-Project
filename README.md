@@ -66,8 +66,6 @@ We end up with 121 rows or instances and 11 columns or features.
 
 # EDA with Pandas and Numpy
 
-3_EDA.ipynb
-
 Libraries or modules used: pandas, numpy
 
 Functions from the Pandas and NumPy libraries such as value_counts() are used to derive basic information about the data collected, which includes:
@@ -79,8 +77,6 @@ The number of occurrence of each orbit
 The number and occurrence of each mission outcome
 
 # EDA with SQL
-
-4_EDA with SQL.ipynb
 
 Framework used: IBM DB2
 
@@ -97,8 +93,6 @@ The average payload mass carried by booster version F9 v1.1
 The SQL statements or functions used include SELECT, DISTINCT, AS, FROM, WHERE, LIMIT, LIKE, SUM(), AVG(), MIN(), BETWEEN, COUNT(), and YEAR().
 
 # Data Visualization using Matplotlib and Seaborn
-
-5_EDA Visualization.ipynb
 
 Libraries or modules used: pandas, numpy, matplotlib.pyplot, seaborn
 
@@ -120,8 +114,6 @@ Example: A scatterplot showing the relationship between flight number and launch
 
 # Data Visualization using Folium
 
-6_Interactive Visual Analytics with Folium lab.ipynb
-
 Libraries or modules used: folium, wget, pandas, math
 
 Functions from the Folium libraries are used to visualize the data through interactive maps. The Folium library is used to:
@@ -142,55 +134,47 @@ Picture 2
 
 # Data Visualization using Dash
 
-7_spacex_dash_app.py
-
 Libraries or modules used: pandas, dash, dash_html_components, dash_core_components, Input and Output from dash.dependencies, plotly.express
 
 Functions from Dash are used to generate an interactive site where we can toggle the input using a dropdown menu and a range slider. Using a pie chart and a scatterplot, the interactive site shows:
 
-The total success launches from each launch site
-
-The correlation between payload mass and mission outcome (success or failure) for each launch site
-
+The total success launches from each launch site.
+The correlation between payload mass and mission outcome (success or failure) for each launch site.
 The application is launched on a terminal on the IBM Skills Network website.
 
-
-The picture below shows a pie chart when launch site CCAFS LC-40 is chosen in the dropdown menu on the website. 0 represents failed launches while 1 represents successful launches. We can see that 73.1% of launches done at CCAFS LC-40 are failed launches.
-
-
-
-
 The picture below shows a scatterplot when the payload mass range is set to be from 2000kg to 8000kg. Class 0 represents failed launches while class 1 represents successful launches.
-Picture 4
+<img width="748" height="271" alt="dash" src="https://github.com/user-attachments/assets/91d19340-ed5a-4a7a-89b0-f5c0be0246b4" />
 
 
 # Machine Learning Prediction
-
-8_Machine Learning Prediction.ipynb
-
 Libraries or modules used: pandas, numpy, matplotlib.pyplot, seaborn, sklearn
 
 Functions from the Scikit-learn library are used to create our machine learning models. The machine learning prediction phase include the following steps:
 
-Standardizing the data using the preprocessing.StandardScaler() function from sklearn
-Splitting the data into training and test data using the train_test_split function from sklearn.model_selection
-Creating machine learning models, which include:
-Logistic regression using LogisticRegression from sklearn.linear_model
-Support vector machine (SVM) using SVC from sklearn.svm
-Decision tree using DecisionTreeClassifier from sklearn.tree
-K nearest neighbors (KNN) using KNeighborsClassifier from sklearn.neighbors
-Fit the models on the training set
-Find the best combination of hyperparameters for each model using GridSearchCV from sklearn.model_selection
-Evaluate the models based on their accuracy scores and confusion matrix using the score() function and confusion_matrix from sklearn.metrics
-Putting the results of all 4 models side by side, we can see that they all share the same accuracy score and confusion matrix when tested on the test set. Therefore, their GridSearchCV best scores are used to rank them instead. Based on the GridSearchCV best scores, the models are ranked in the following order with the first being the best and the last one being the worst:
+Standardizing the data using the preprocessing.StandardScaler() function from sklearn.
+Splitting the data into training and test data using the train_test_split function from sklearn.model_selection.
 
-Decision tree (GridSearchCV best score: 0.8892857142857142)
-K nearest neighbors, KNN (GridSearchCV best score: 0.8482142857142858)
-Support vector machine, SVM (GridSearchCV best score: 0.8482142857142856)
-Logistic regression (GridSearchCV best score: 0.8464285714285713)
+**Creating machine learning models, which include:**
 
-The picture below shows the confusion matrix when the Decision Tree model is tested on the test data.
-Picture 5
+- Logistic regression using LogisticRegression from sklearn.linear_model
+- Support vector machine (SVM) using SVC from sklearn.svm
+- Decision tree using DecisionTreeClassifier from sklearn.tree
+- K nearest neighbors (KNN) using KNeighborsClassifier from sklearn.neighbors
+
+**Fit the models on the training set**
+1. Find the best combination of hyperparameters for each model using GridSearchCV from sklearn.model_selection
+2. Evaluate the models based on their accuracy scores and confusion matrix using the score() function and confusion_matrix from sklearn.metrics
+3. Putting the results of all 4 models side by side, we can see that they all share the same accuracy score and confusion matrix when tested on the test set.
+
+Therefore, their GridSearchCV best scores are used to rank them instead. Based on the GridSearchCV best scores, the models are ranked in the following order with the first being the best and the last one being the worst:
+
+- Decision tree (GridSearchCV best score: 0.8892857142857142)
+- K nearest neighbors, KNN (GridSearchCV best score: 0.8482142857142858)
+- Support vector machine, SVM (GridSearchCV best score: 0.8482142857142856)
+- Logistic regression (GridSearchCV best score: 0.8464285714285713)
+
+The picture below shows the model performance comparisions.
+<img width="855" height="547" alt="Model Performance" src="https://github.com/user-attachments/assets/76c765ff-02e5-45d7-bfff-e1cf44f06a2b" />
 
 
 # Discussion
