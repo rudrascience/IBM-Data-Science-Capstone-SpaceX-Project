@@ -45,8 +45,6 @@ The overall methodology includes:
 
 Libraries or modules used: requests, pandas, numpy, datetime
 
-The API used is here.
-
 The API provides data about many types of rocket launches done by SpaceX, the data is therefore filtered to include only Falcon 9 launches.
 The API is accessed using requests.get().
 The json result is converted to a dataframe using the json_normalize() function from pandas.
@@ -65,16 +63,13 @@ A dataframe is then created with the extracted column names and entries filled w
 We end up with 121 rows or instances and 11 columns or features.
 
 # EDA with Pandas and Numpy
-
 Libraries or modules used: pandas, numpy
 
 Functions from the Pandas and NumPy libraries such as value_counts() are used to derive basic information about the data collected, which includes:
 
-The number of launches on each launch site
-
-The number of occurrence of each orbit
-
-The number and occurrence of each mission outcome
+- The number of launches on each launch site
+- The number of occurrence of each orbit
+- The number and occurrence of each mission outcome
 
 # EDA with SQL
 
