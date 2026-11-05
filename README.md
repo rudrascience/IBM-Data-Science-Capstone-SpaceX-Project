@@ -45,16 +45,18 @@ The overall methodology includes:
 
 Libraries or modules used: requests, pandas, numpy, datetime
 
-The API provides data about many types of rocket launches done by SpaceX, the data is therefore filtered to include only Falcon 9 launches.
-The API is accessed using requests.get().
-The json result is converted to a dataframe using the json_normalize() function from pandas.
-Every missing value in the data is replaced the mean the column that the missing value belongs to.
+- The API provides data about many types of rocket launches done by SpaceX, the data is therefore filtered to include only Falcon 9 launches.
+- The API is accessed using requests.get().
+- The json result is converted to a dataframe using the json_normalize() function from pandas.
+- Every missing value in the data is replaced the mean the column that the missing value belongs to.
+
 We end up with 90 rows or instances and 17 columns or features.
 
 # Data Collection with Web Scraping
 Libraries or modules used: sys, requests, BeautifulSoup from bs4, re, unicodedata, pandas
-The data is scraped from List of Falcon 9 and Falcon Heavy launches.
-The website contains only the data about Falcon 9 launches.
+
+- The data is scraped from List of Falcon 9 and Falcon Heavy launches.
+- The website contains only the data about Falcon 9 launches.
 
 First, the Falcon9 Launch Wiki page is requested from the url and a BeautifulSoup object is created from response of requests.get().
 Next, all column/variable names are extracted from the HTML table header by using the find_all() function from BeautifulSoup.
