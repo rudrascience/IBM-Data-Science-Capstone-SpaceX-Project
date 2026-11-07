@@ -49,7 +49,7 @@ The central business question:
 
 This project investigates the question using historical launch data and supervised machine learning.
 
-Project Objectives
+**Project Objectives**
 
 1. Collect historical Falcon 9 launch data using the SpaceX REST API.
 2. Extract supplementary launch information through web scraping.
