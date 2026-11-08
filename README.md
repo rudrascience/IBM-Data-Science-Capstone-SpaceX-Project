@@ -67,18 +67,18 @@ This project investigates the question using historical launch data and supervis
 
 # Technology Stack
 
-
-|Category| Tools and Technologies
-|Programming| Python
-|Data Collection| REST API, Requests, BeautifulSoup
-|Data Processing| Pandas, NumPy
-|Database| IBM DB2, SQL
-|Data Visualization| Matplotlib, Seaborn
-|Interactive Maps| Folium
-|Interactive Dashboard| Plotly, Dash
-|Machine Learning| Scikit-learn
-|Model Optimization| GridSearchCV
-|Development Environment| Jupyter Notebook
+|Category| Tools and Technologies|
+|---|---|
+|Programming| Python |
+|Data Collection| REST API, Requests, BeautifulSoup |
+|Data Processing| Pandas, NumPy |
+|Database| IBM DB2, SQL |
+|Data Visualization| Matplotlib, Seaborn |
+|Interactive Maps| Folium |
+|Interactive Dashboard| Plotly, Dash |
+|Machine Learning| Scikit-learn |
+|Model Optimization| GridSearchCV |
+|Development Environment| Jupyter Notebook |
 
 
 # End-to-End Project Workflow
