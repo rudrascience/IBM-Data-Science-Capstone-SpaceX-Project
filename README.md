@@ -288,6 +288,7 @@ These observations are exploratory associations, not proof of causation.
 
 # Repository Structure
 
+```
 IBM-Data-Science-Capstone-SpaceX-Project/
 │
 ├── 1.jupyter_labs_spacex_data_collection_api.ipynb
@@ -313,6 +314,8 @@ IBM-Data-Science-Capstone-SpaceX-Project/
 ├── LICENSE
 │
 └── README.md
+
+```
 
 ₹ Project Deliverables
 
