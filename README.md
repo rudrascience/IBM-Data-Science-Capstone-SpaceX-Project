@@ -12,7 +12,9 @@ End-to-End Data Science | Exploratory Data Analysis | Machine Learning | Interac
   <img src="https://img.shields.io/badge/SQL-IBM%20DB2-blue" />
   <img src="https://img.shields.io/badge/Project-IBM%20Capstone-052FAD" />
   <img src="https://img.shields.io/badge/License-MIT-brightgreen" />
-</p>Executive Summary
+</p>
+
+# Executive Summary
 
 Can we predict whether a SpaceX Falcon 9 first-stage booster will land successfully using historical launch data?
 
@@ -22,14 +24,14 @@ The primary objective is to identify patterns in historical Falcon 9 launches an
 
 Using data collected from the SpaceX API and web scraping, I investigated the relationships between launch characteristics, including payload mass, orbit type, launch site, and mission outcomes.
 
-Four machine learning algorithms were developed and evaluated:
+**Four machine learning algorithms were developed and evaluated:**
 
 - Logistic Regression
 - Support Vector Machine (SVM)
 - Decision Tree
 - K-Nearest Neighbors (KNN)
 
-The Decision Tree achieved the highest GridSearchCV score of 88.93% among the evaluated models.
+The **Decision Tree** achieved the highest GridSearchCV score of **88.93%** among the evaluated models.
 
 Beyond predictive modeling, this project demonstrates practical experience in data acquisition, SQL querying, statistical exploration, geographical analysis, and interactive data storytelling.
 
@@ -43,13 +45,13 @@ Booster recovery is an important contributor to SpaceX's launch economics. Under
 
 For companies evaluating commercial launch opportunities, estimating the likelihood of booster recovery can help inform launch-cost assumptions and competitive assessments.
 
-The central business question:
+**The central business question:**
 
-«Given the characteristics of a Falcon 9 launch, can we predict whether its first-stage booster will land successfully?»
+- Given the characteristics of a Falcon 9 launch, can we predict whether its first-stage booster will land successfully?
 
 This project investigates the question using historical launch data and supervised machine learning.
 
-**Project Objectives**
+# **Project Objectives**
 
 1. Collect historical Falcon 9 launch data using the SpaceX REST API.
 2. Extract supplementary launch information through web scraping.
@@ -65,29 +67,31 @@ This project investigates the question using historical launch data and supervis
 
 # Technology Stack
 
-Category| Tools and Technologies
-Programming| Python
-Data Collection| REST API, Requests, BeautifulSoup
-Data Processing| Pandas, NumPy
-Database| IBM DB2, SQL
-Data Visualization| Matplotlib, Seaborn
-Interactive Maps| Folium
-Interactive Dashboard| Plotly, Dash
-Machine Learning| Scikit-learn
-Model Optimization| GridSearchCV
-Development Environment| Jupyter Notebook
+
+|Category| Tools and Technologies
+|Programming| Python
+|Data Collection| REST API, Requests, BeautifulSoup
+|Data Processing| Pandas, NumPy
+|Database| IBM DB2, SQL
+|Data Visualization| Matplotlib, Seaborn
+|Interactive Maps| Folium
+|Interactive Dashboard| Plotly, Dash
+|Machine Learning| Scikit-learn
+|Model Optimization| GridSearchCV
+|Development Environment| Jupyter Notebook
+
 
 # End-to-End Project Workflow
 
 The project follows seven major stages of the data science lifecycle.
 
-**1. Data Collection Using SpaceX API**
+<ins>**1. Data Collection Using SpaceX API**</ins>
 
 Notebook: "1.jupyter_labs_spacex_data_collection_api.ipynb"
 
 Collected historical launch information through the SpaceX REST API.
 
-Key activities:
+**Key activities:**
 
 - Accessed SpaceX launch data using HTTP requests.
 - Retrieved JSON responses from the API.
