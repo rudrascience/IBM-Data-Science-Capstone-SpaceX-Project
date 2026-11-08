@@ -412,6 +412,7 @@ These improvements would help evolve the project from an analytical capstone int
 This project demonstrates practical application of the following data science competencies:
 
 Skill| Practical Application
+---|---
 Python Programming| Data extraction, transformation, and analysis
 API Integration| Collecting structured SpaceX launch data
 Web Scraping| Extracting historical launch records
