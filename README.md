@@ -87,7 +87,7 @@ The project follows seven major stages of the data science lifecycle.
 
 <ins>**1. Data Collection Using SpaceX API**</ins>
 
-Notebook: "1.jupyter_labs_spacex_data_collection_api.ipynb"
+Notebook: 1.jupyter_labs_spacex_data_collection_api.ipynb
 
 Collected historical launch information through the SpaceX REST API.
 
