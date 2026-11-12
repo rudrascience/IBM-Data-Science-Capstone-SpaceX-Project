@@ -219,7 +219,6 @@ Model development workflow:
 7. Compared the optimized models.
 
 **Algorithms implemented:**
-
 ---|---
 Algorithm| Scikit-learn Implementation
 Logistic Regression| "LogisticRegression"
