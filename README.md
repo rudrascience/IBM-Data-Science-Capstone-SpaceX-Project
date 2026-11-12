@@ -233,7 +233,7 @@ K-Nearest Neighbors| "KNeighborsClassifier"
 **Model Comparison**
 
 The following table presents the best cross-validation scores obtained through GridSearchCV.
-
+---|---
 Model| Best GridSearchCV Score
 Decision Tree| 88.93%
 K-Nearest Neighbors| 84.82%
