@@ -218,8 +218,9 @@ Model development workflow:
 6. Evaluated model performance using accuracy scores and confusion matrices.
 7. Compared the optimized models.
 
-Algorithms implemented:
+**Algorithms implemented:**
 
+|---|---|
 Algorithm| Scikit-learn Implementation
 Logistic Regression| "LogisticRegression"
 Support Vector Machine| "SVC"
