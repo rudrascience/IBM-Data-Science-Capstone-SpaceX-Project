@@ -220,12 +220,12 @@ Model development workflow:
 
 **Algorithms implemented:**
 
-|---|---|
-|Algorithm| Scikit-learn Implementation|
-|Logistic Regression| "LogisticRegression"|
-|Support Vector Machine| "SVC"|
-|Decision Tree| "DecisionTreeClassifier"|
-|K-Nearest Neighbors| "KNeighborsClassifier"|
+---|---
+Algorithm| Scikit-learn Implementation
+Logistic Regression| "LogisticRegression"
+Support Vector Machine| "SVC"
+Decision Tree| "DecisionTreeClassifier"
+K-Nearest Neighbors| "KNeighborsClassifier"
 
 ---
 
